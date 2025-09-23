@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
 
-      <h3 className="navbar-title">Chat App</h3>
+      <h3 className="navbar-title">Sandesh</h3>
 
       {user && <span className="navbar-user">Hi, {user.name}</span>}
 
