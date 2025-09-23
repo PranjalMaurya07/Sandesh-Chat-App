@@ -1,0 +1,84 @@
+/* Container */
+.newchat-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Title */
+.newchat-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+/* Empty state */
+.newchat-empty {
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+}
+
+/* User list */
+.newchat-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.newchat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: background 0.2s ease;
+}
+
+.newchat-item:hover {
+  background: #f0f4ff;
+}
+
+/* Username */
+.newchat-username {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Button */
+.newchat-btn {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.newchat-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .newchat-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .newchat-btn {
+    width: 100%;
+    text-align: center;
+    padding: 8px;
+  }
+}
