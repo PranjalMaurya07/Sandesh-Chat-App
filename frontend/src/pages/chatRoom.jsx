@@ -39,7 +39,7 @@ export default function Chat() {
   const location = useLocation();
 
   useEffect(() => {
-    socket = io("http://localhost:5000");
+    socket = io("https://sandesh-chat-app-backend.onrender.com/api");
     socket.on("connect", () => console.log("Socket connected:", socket.id));
 
     socket.on("receiveMessage", (msg) => {
