@@ -22,7 +22,7 @@ app.use("/api", usersRoutes);
 
 // For health-check
 
-app.get('/health', (req,res) => {
+app.get('/api/health', (req,res) => {
   res.status(200).json({status : "Ready to work"});
 })
 
