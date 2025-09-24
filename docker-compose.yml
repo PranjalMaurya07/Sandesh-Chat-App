@@ -1,0 +1,31 @@
+services:
+  backend-service:
+    build: ./backend
+    container_name: chat-backend
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=mongodb+srv://pranjalmaurya003_db_user:db%40123@cluster0.phr0bnt.mongodb.net/
+      - JWT_SECRET=supersecretkey
+    depends_on:
+      - mongo
+
+  frontend:
+    build: ./frontend
+    container_name: chat-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend-service
+
+  mongo:
+    image: mongo:6
+    container_name: chat-mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
