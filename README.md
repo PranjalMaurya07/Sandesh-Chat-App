@@ -2,6 +2,7 @@
 # Sandesh- A Realtime Chat Application
 
 This is a MERN based project, that provides realtime messaging facility and also focus on using modern technologies for making the application secure, easy to use and maintain.
+
 ## Features
 
 - **Chat System**: Real-time one-to-one conversations powered by Socket.IO.
@@ -10,10 +11,6 @@ This is a MERN based project, that provides realtime messaging facility and also
 - **Modern UI Design**: Human-friendly formatting and Responsive UI. 
 - **Containerized with Docker (frontend & backend).**
 - **Orchestrated with Kubernetes (Deployments, Services, Ingress).**
-
-
-
-    
 
 
 ## Tech Stack
@@ -25,6 +22,38 @@ This is a MERN based project, that provides realtime messaging facility and also
 - **Orchestration**: Kubernetes
 - **CI/CD**: Jenkins (Planned)
 - **Monitoring and Logging**: Prometheus & Grafana (Planned)
+
+## Folder Strucure
+
+chatApp/
+├── backend/              # Node.js + Express API
+│   ├── models/           # Mongoose models (User, Conversation, Message)
+│   ├── routes/           # Express routes (auth, chat, users)
+│   ├── controllers/      # Business logic
+│   ├── middleware/       # JWT auth middleware
+│   ├── index.js          # App entrypoint
+│   └── Dockerfile
+│
+├── frontend/             # React (Vite) client
+│   ├── src/
+│   │   ├── pages/        # Login, Register, Chat, NewChat
+│   │   ├── context/      # AuthContext
+│   │   └── services/     # API service (Axios)
+│   ├── nginx.conf        # Nginx config for SPA + API proxy
+│   └── Dockerfile
+│
+├── k8s/                  # Kubernetes manifests
+│   ├── namespace.yml
+│   ├── secrets.yml
+│   ├── backend-deployment.yml
+│   ├── backend-service.yml
+│   ├── frontend-deployment.yml
+│   ├── frontend-service.yml
+│   └── ingress.yml
+│
+├── docker-compose.yml
+└── README.md
+
    
 
 ## Environment Variables
